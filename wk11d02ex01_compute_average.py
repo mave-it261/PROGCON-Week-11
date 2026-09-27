@@ -4,9 +4,8 @@ def computeAverage(numbers):
     index = 0
     while True:    #This simulates a Do Loop
         num = numbers[index]
-        if num != 0:
-            total = total + num
-            count = count + 1
+        total = total + num
+        count = count + 1
         index = index + 1
         if index >= 4: break
     average = float(total) / count
