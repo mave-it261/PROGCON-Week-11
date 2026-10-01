@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="bitteeerrr"/>
+        <attribute name="authors" value="maverick"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-28 01:38:28 AM"/>
+        <attribute name="created" value="bWF2ZXJpY2s7TUFWRVJJQ0stLUFDRVItOzIwMjYtMDktMjc7MDU6NDY6NTkgUE07MzE2Mw=="/>
+        <attribute name="edited" value="bWF2ZXJpY2s7TUFWRVJJQ0stLUFDRVItOzIwMjYtMDktMjc7MDc6MDY6MzIgUE07MTttYXZlcmljaztNQVZFUklDSy0tQUNFUi07MjAyNi0wOS0yNzswNTo0Njo1OSBQTTs2NDgy"/>
+        <attribute name="edited" value="bWF2ZXJpY2s7TUFWRVJJQ0stLUFDRVItOzIwMjYtMDktMjg7MDE6Mzg6MjggQU07MTE7MzI5OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numbers" type="Integer" array="True" size="4"/>
+            <input variable="numbers[0]"/>
+            <input variable="numbers[1]"/>
+            <input variable="numbers[2]"/>
+            <input variable="numbers[3]"/>
+            <output expression="computeAverage(numbers)" newline="True"/>
+        </body>
+    </function>
+    <function name="computeAverage" type="Real" variable="average">
+        <parameters>
+            <parameter name="numbers" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="total, count, index, num" type="Integer" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <assign variable="count" expression="0"/>
+            <assign variable="index" expression="0"/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <do expression="index &lt; 4">
+                <assign variable="num" expression="numbers[index]"/>
+                <assign variable="total" expression="total + num"/>
+                <assign variable="count" expression="count + 1"/>
+                <assign variable="index" expression="index + 1"/>
+            </do>
+            <assign variable="average" expression="total / count"/>
+        </body>
+    </function>
+</flowgorithm>
